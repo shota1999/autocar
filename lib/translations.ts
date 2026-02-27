@@ -1,0 +1,208 @@
+export type Locale = "ka" | "ru" | "en"
+
+export const translations: Record<Locale, Record<string, string>> = {
+  ka: {
+    // Header
+    "nav.home": "მთავარი",
+    "nav.services": "სერვისები",
+    "nav.gallery": "გალერეა",
+    "nav.contact": "კონტაქტი",
+    "nav.contactUs": "დაგვიკავშირდით",
+
+    // Hero
+    "hero.subtitle": "პრემიუმ ავტო სერვისი, გარანტირებული ხარისხი",
+    "hero.title": "სრული ავტო სერვისი მაღალი ხარისხით",
+    "hero.accordion1.title": "პრემიუმ სათუნუქე სამუშაოები",
+    "hero.accordion1.content": "ჩვენი პრემიუმ სათუნუქე სამუშაოები მოიცავს ალუმინის გასწორებას, კონტაქტურ სვარკას და სრულ აღდგენას ქარხნული სტანდარტებით.",
+    "hero.accordion2.title": "სრული აღდგენის სერვისი",
+    "hero.accordion2.content": "ავარიული დაზიანებების შეკეთებიდან ავტომობილის სრულ აღდგენამდე, ჩვენი ექსპერტი ტექნიკოსები თქვენს მანქანას სალონურ მდგომარეობაში დააბრუნებენ.",
+    "hero.cta": "სერვისების ნახვა",
+
+    // Services
+    "services.title": "სერვისები",
+    "services.subtitle": "გამოცდილი ავტომობილის სრული ტექნოლოგიური მომსახურება",
+    "services.cta": "დაჯავშნა",
+    "service.1": "სათუნუქე სამუშაოები",
+    "service.1.desc": "პროფესიონალური სათუნუქე სამუშაოები ნებისმიერი სირთულის დაზიანებისთვის",
+    "service.2": "რობოტი",
+    "service.2.desc": "თანამედროვე რობოტული ტექნოლოგიებით სამუშაოების შესრულება",
+    "service.3": "დაშლა აწყობა",
+    "service.3.desc": "ავტომობილის პროფესიონალური დაშლა და აწყობა",
+    "service.4": "დაზაზორება",
+    "service.4.desc": "ზედაპირის დაზაზორება და მომზადება შეღებვისთვის",
+    "service.5": "მორგება შეღებვა",
+    "service.5.desc": "პროფესიონალური მორგება და მაღალხარისხიანი შეღებვა",
+    "service.6": "პოლირება",
+    "service.6.desc": "საღებავის კორექცია და სარკისებური პოლირება",
+    "service.7": "ალუმინის გასწორება",
+    "service.7.desc": "ალუმინის პანელების და დეტალების პროფესიონალური გასწორება",
+    "service.8": "კონტაქტური სვარკა",
+    "service.8.desc": "მაღალხარისხიანი კონტაქტური სვარკა თანამედროვე აღჭურვილობით",
+
+    // Gallery
+    "gallery.subtitle": "ჩვენი სამუშაოები",
+    "gallery.title": "გალერეა - მანამდე და შემდეგ",
+    "gallery.description": "ნახეთ ტრანსფორმაცია. გადაათრიეთ სლაიდერი მანამდე და შემდეგ შედეგების შესადარებლად.",
+    "gallery.before": "მანამდე",
+    "gallery.after": "შემდეგ",
+    "gallery.item1.title": "ავარიის აღდგენა",
+    "gallery.item1.desc": "წინა ნაწილის სრული აღდგენა ავარიის შემდეგ",
+    "gallery.item2.title": "საღებავის კორექცია",
+    "gallery.item2.desc": "სრული საღებავის აღდგენა და კერამიკული დაფარვა",
+    "gallery.item3.title": "ინტერიერის დეტეილინგი",
+    "gallery.item3.desc": "ღრმა გაწმენდა და ტყავის კონდიციონირება",
+    "gallery.item4.title": "ძარის შეკეთება",
+    "gallery.item4.desc": "ჩაჭრილობის მოხსნა და შეღებვის შეუმჩნეველი შერჩევა",
+    "gallery.item5.title": "Mitsubishi Outlander აღდგენა",
+    "gallery.item5.desc": "უკანა ნაწილის სრული აღდგენა ავარიის შემდეგ",
+    "gallery.item7.title": "Alfa Romeo Stelvio უკანა ნაწილი",
+    "gallery.item7.desc": "უკანა ნაწილის ფინალური შედეგი და დეტეილინგი",
+
+    // Contact
+    "contact.subtitle": "დაგვიკავშირდით",
+    "contact.title": "კონტაქტი",
+
+    // Footer
+    "footer.description": "პრემიუმ ავტო სერვისი სრულყოფილებისკენ მისწრაფებით. თქვენი ავტომობილი იმსახურებს საუკეთესოს.",
+    "footer.quickLinks": "სწრაფი ბმულები",
+    "footer.services": "სერვისები",
+    "footer.contactInfo": "საკონტაქტო ინფორმაცია",
+    "footer.rights": "ყველა უფლება დაცულია.",
+  },
+  ru: {
+    // Header
+    "nav.home": "Главная",
+    "nav.services": "Услуги",
+    "nav.gallery": "Галерея",
+    "nav.contact": "Контакт",
+    "nav.contactUs": "Связаться",
+
+    // Hero
+    "hero.subtitle": "Премиальный автосервис, гарантированное качество",
+    "hero.title": "Мы обеспечиваем полную технологическую защиту вашего автомобиля",
+    "hero.accordion1.title": "Премиальные кузовные работы",
+    "hero.accordion1.content": "Наши премиальные кузовные работы включают выпрямление алюминия, контактную сварку и полное восстановление по заводским стандартам.",
+    "hero.accordion2.title": "Полный сервис восстановления",
+    "hero.accordion2.content": "От ремонта аварийных повреждений до полного восстановления автомобиля, наши техники вернут вашу машину в салонное состояние.",
+    "hero.cta": "Наши услуги",
+
+    // Services
+    "services.title": "Услуги",
+    "services.subtitle": "Полное технологическое обслуживание автомобилей опытными специалистами",
+    "services.cta": "Записаться",
+    "service.1": "Кузовные работы",
+    "service.1.desc": "Профессиональные кузовные работы для повреждений любой сложности",
+    "service.2": "Робот",
+    "service.2.desc": "Выполнение работ с использованием современных роботизированных технологий",
+    "service.3": "Разборка и сборка",
+    "service.3.desc": "Профессиональная разборка и сборка автомобиля",
+    "service.4": "Зазоровка",
+    "service.4.desc": "Зазоровка поверхности и подготовка к покраске",
+    "service.5": "Подгонка и покраска",
+    "service.5.desc": "Профессиональная подгонка и высококачественная покраска",
+    "service.6": "Полировка",
+    "service.6.desc": "Коррекция краски и зеркальная полировка",
+    "service.7": "Выпрямление алюминия",
+    "service.7.desc": "Профессиональное выпрямление алюминиевых панелей и деталей",
+    "service.8": "Контактная сварка",
+    "service.8.desc": "Высококачественная контактная сварка на современном оборудовании",
+
+    // Gallery
+    "gallery.subtitle": "Наши работы",
+    "gallery.title": "Галерея - До и После",
+    "gallery.description": "Посмотрите трансформацию. Перетащите слайдер для сравнения результатов до и после.",
+    "gallery.before": "ДО",
+    "gallery.after": "ПОСЛЕ",
+    "gallery.item1.title": "Восстановление после ДТП",
+    "gallery.item1.desc": "Полное восстановление передней части после аварии",
+    "gallery.item2.title": "Коррекция краски",
+    "gallery.item2.desc": "Полное восстановление краски и керамическое покрытие",
+    "gallery.item3.title": "Детейлинг интерьера",
+    "gallery.item3.desc": "Глубокая очистка и кондиционирование кожи",
+    "gallery.item4.title": "Ремонт кузова",
+    "gallery.item4.desc": "Удаление вмятин и безупречный подбор краски",
+    "gallery.item5.title": "Восстановление Mitsubishi Outlander",
+    "gallery.item5.desc": "Полное восстановление задней части после ДТП",
+    "gallery.item7.title": "Задняя часть Alfa Romeo Stelvio",
+    "gallery.item7.desc": "Финальный вид задней части после ремонта",
+
+    // Contact
+    "contact.subtitle": "Свяжитесь с нами",
+    "contact.title": "Контакты",
+
+    // Footer
+    "footer.description": "Премиальный автосервис со страстью к совершенству. Ваш автомобиль заслуживает лучшего.",
+    "footer.quickLinks": "Быстрые ссылки",
+    "footer.services": "Услуги",
+    "footer.contactInfo": "Контактная информация",
+    "footer.rights": "Все права защищены.",
+  },
+  en: {
+    // Header
+    "nav.home": "Home",
+    "nav.services": "Services",
+    "nav.gallery": "Gallery",
+    "nav.contact": "Contact",
+    "nav.contactUs": "Contact Us",
+
+    // Hero
+    "hero.subtitle": "Premium Auto Service, Excellence Guaranteed",
+    "hero.title": "We Provide Complete Auto Technology Protection",
+    "hero.accordion1.title": "Premium Body Work",
+    "hero.accordion1.content": "Our premium body work includes aluminum straightening, contact welding, and complete restoration to factory standards.",
+    "hero.accordion2.title": "Full Restoration Services",
+    "hero.accordion2.content": "From accident damage repair to complete vehicle restoration, our expert technicians bring your car back to showroom condition.",
+    "hero.cta": "Explore Services",
+
+    // Services
+    "services.title": "Services",
+    "services.subtitle": "Complete automotive technology service by experienced professionals",
+    "services.cta": "Book Now",
+    "service.1": "Body Work",
+    "service.1.desc": "Professional body work for damage of any complexity",
+    "service.2": "Robotic Repair",
+    "service.2.desc": "Work performed using modern robotic technologies",
+    "service.3": "Disassembly & Assembly",
+    "service.3.desc": "Professional vehicle disassembly and reassembly",
+    "service.4": "Gap Alignment",
+    "service.4.desc": "Surface gap alignment and preparation for painting",
+    "service.5": "Fitting & Painting",
+    "service.5.desc": "Professional fitting and high-quality painting",
+    "service.6": "Polishing",
+    "service.6.desc": "Paint correction and mirror-finish polishing",
+    "service.7": "Aluminum Straightening",
+    "service.7.desc": "Professional straightening of aluminum panels and parts",
+    "service.8": "Contact Welding",
+    "service.8.desc": "High-quality contact welding with modern equipment",
+
+    // Gallery
+    "gallery.subtitle": "Our Work",
+    "gallery.title": "Before & After Gallery",
+    "gallery.description": "See the transformation. Drag the slider to compare before and after results of our professional auto services.",
+    "gallery.before": "BEFORE",
+    "gallery.after": "AFTER",
+    "gallery.item1.title": "Collision Repair",
+    "gallery.item1.desc": "Complete front-end restoration after accident damage",
+    "gallery.item2.title": "Paint Correction",
+    "gallery.item2.desc": "Full paint restoration and ceramic coating application",
+    "gallery.item3.title": "Interior Detailing",
+    "gallery.item3.desc": "Deep cleaning and leather conditioning",
+    "gallery.item4.title": "Body Repair",
+    "gallery.item4.desc": "Dent removal and seamless paint matching",
+    "gallery.item5.title": "Mitsubishi Outlander Restoration",
+    "gallery.item5.desc": "Complete rear-end restoration after collision damage",
+    "gallery.item7.title": "Alfa Romeo Stelvio Rear Finish",
+    "gallery.item7.desc": "Final rear view after restoration and detailing",
+
+    // Contact
+    "contact.subtitle": "Get In Touch",
+    "contact.title": "Contact Us",
+
+    // Footer
+    "footer.description": "Premium automotive care services with a passion for perfection. Your vehicle deserves the best.",
+    "footer.quickLinks": "Quick Links",
+    "footer.services": "Services",
+    "footer.contactInfo": "Contact Info",
+    "footer.rights": "All rights reserved.",
+  },
+}
