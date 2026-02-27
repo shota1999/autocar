@@ -81,10 +81,8 @@ export function Footer() {
           <div>
             <h4 className="mb-4 font-semibold text-white">{t("footer.contactInfo")}</h4>
             <ul className="space-y-2 text-sm text-white/60">
-              <li>123 Auto Boulevard</li>
-              <li>Car City, CC 12345</li>
-              <li>+1 (555) 123-4567</li>
-              <li>info@autopro.com</li>
+              <li>+995 568 705 713</li>
+              <li>+995 555 54 16 44</li>
             </ul>
           </div>
         </div>
