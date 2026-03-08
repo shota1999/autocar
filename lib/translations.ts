@@ -61,6 +61,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     // Contact
     "contact.subtitle": "დაგვიკავშირდით",
     "contact.title": "კონტაქტი",
+    "contact.address": "თბილისი, თორნიკე ერისთავის ქუჩა 4",
 
     // Footer
     "footer.description": "პრემიუმ ავტო სერვისი სრულყოფილებისკენ მისწრაფებით. თქვენი ავტომობილი იმსახურებს საუკეთესოს.",
@@ -129,6 +130,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     // Contact
     "contact.subtitle": "Свяжитесь с нами",
     "contact.title": "Контакты",
+    "contact.address": "Тбилиси, улица Торнике Эристави, 4",
 
     // Footer
     "footer.description": "Премиальный автосервис со страстью к совершенству. Ваш автомобиль заслуживает лучшего.",
@@ -197,6 +199,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     // Contact
     "contact.subtitle": "Get In Touch",
     "contact.title": "Contact Us",
+    "contact.address": "Tbilisi, Tornike Eristavi Street 4",
 
     // Footer
     "footer.description": "Premium automotive care services with a passion for perfection. Your vehicle deserves the best.",

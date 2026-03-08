@@ -9,6 +9,25 @@ export function HeroSection() {
   const [openItem, setOpenItem] = useState<number | null>(1)
   const { t } = useLanguage()
 
+  const collageImages = {
+    before: {
+      src: "/images/outlander-before.jpg",
+      alt: "Mitsubishi Outlander before restoration",
+    },
+    after: {
+      src: "/images/outlander-after.jpg",
+      alt: "Mitsubishi Outlander after restoration",
+    },
+    side: {
+      src: "/images/d674206b-6b0b-41b8-af41-95f4dd18688b.jpg",
+      alt: "Alfa Romeo Stelvio side repair result",
+    },
+    damage: {
+      src: "/images/1e5a481c-89f7-4417-abcb-51bf9a206f6c.jpg",
+      alt: "Alfa Romeo Stelvio rear quarter damage before repair",
+    },
+  }
+
   const accordionItems = [
     {
       id: 1,
@@ -29,35 +48,76 @@ export function HeroSection() {
     >
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Image Collage */}
-        <div className="relative grid grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-              <Image
-                src="/images/outlander-before.jpg"
-                alt="Mitsubishi Outlander before restoration"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-              <Image
-                src="/images/outlander-after.jpg"
-                alt="Mitsubishi Outlander after restoration"
-                fill
-                className="object-cover"
-              />
+        <div className="relative">
+          <div className="space-y-4 lg:hidden">
+            {[collageImages.before, collageImages.after, collageImages.side, collageImages.damage].map((image) => (
+              <div
+                key={image.src}
+                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-[0_24px_70px_rgba(0,0,0,0.35)]"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+
+            <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-white/10 bg-zinc-900/70 p-4 text-center shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
+              <div>
+                <p className="text-4xl font-bold text-red-500">15+</p>
+                <p className="text-sm text-white/70">Years Experience</p>
+              </div>
             </div>
           </div>
-          <div className="space-y-4 pt-8">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-              <Image
-                src="/images/d674206b-6b0b-41b8-af41-95f4dd18688b.jpg"
-                alt="Alfa Romeo Stelvio side repair result"
-                fill
-                className="object-cover"
-              />
+
+          <div className="relative hidden min-h-[585px] lg:block">
+            <div className="absolute top-2 left-0 w-[52%] rotate-[-3deg] overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={collageImages.before.src}
+                  alt={collageImages.before.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-zinc-800/50">
+
+            <div className="absolute top-10 right-0 z-10 w-[50%] rotate-[2deg] overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+              <div className="relative aspect-[5/4]">
+                <Image
+                  src={collageImages.after.src}
+                  alt={collageImages.after.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="absolute top-[265px] left-6 z-20 w-[44%] rotate-[-2deg] overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={collageImages.side.src}
+                  alt={collageImages.side.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="absolute top-[305px] right-0 w-[48%] rotate-[3deg] overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={collageImages.damage.src}
+                  alt={collageImages.damage.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="absolute top-[460px] left-[18%] h-[150px] w-[38%] overflow-hidden rounded-[28px] border border-white/10 bg-zinc-900/70 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
               <div className="flex h-full items-center justify-center p-4 text-center">
                 <div>
                   <p className="text-4xl font-bold text-red-500">15+</p>

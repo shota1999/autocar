@@ -22,11 +22,14 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4 md:px-8">
       <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-xl bg-zinc-900/60 px-6 py-3 backdrop-blur-md border border-white/5">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
-            <span className="text-xl font-bold text-white">A</span>
+        <Link href="/" className="flex items-center gap-2.5">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 shadow-[0_10px_30px_rgba(220,38,38,0.35)] ring-1 ring-red-400/30">
+            <span className="text-xl font-black uppercase tracking-[-0.1em] text-white">T</span>
           </div>
-          <span className="text-xl font-bold text-white">AutoPro</span>
+          <span className="flex items-baseline text-[1.35rem] font-black uppercase leading-none tracking-[-0.09em] italic">
+            <span className="text-white">Top</span>
+            <span className="ml-1 text-red-500">Car</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone } from "lucide-react"
+import { MapPin, Phone } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function ContactSection() {
@@ -19,11 +19,11 @@ export function ContactSection() {
 
           <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-16">
             <a
-              href="tel:+995568705713"
+              href="tel:+995595727017"
               className="group flex items-center gap-3 text-white/70 transition-colors hover:text-white"
             >
               <Phone className="h-5 w-5 text-red-500" />
-              <span>+995 568 705 713</span>
+              <span>+995 595 727 017</span>
             </a>
 
             <a
@@ -34,7 +34,10 @@ export function ContactSection() {
               <span>+995 555 54 16 44</span>
             </a>
 
-
+            <div className="flex items-center gap-3 text-white/70">
+              <MapPin className="h-5 w-5 text-red-500" />
+              <span>{t("contact.address")}</span>
+            </div>
           </div>
         </div>
       </div>

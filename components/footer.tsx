@@ -11,11 +11,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 md:grid-cols-4">
           <div>
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
-                <span className="text-xl font-bold text-white">A</span>
+            <Link href="/" className="flex items-center gap-2.5">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 shadow-[0_10px_30px_rgba(220,38,38,0.35)] ring-1 ring-red-400/30">
+                <span className="text-xl font-black uppercase tracking-[-0.1em] text-white">T</span>
               </div>
-              <span className="text-xl font-bold text-white">AutoPro</span>
+              <span className="flex items-baseline text-[1.35rem] font-black uppercase leading-none tracking-[-0.09em] italic">
+                <span className="text-white">Top</span>
+                <span className="ml-1 text-red-500">Car</span>
+              </span>
             </Link>
             <p className="mt-4 text-sm text-white/60 leading-relaxed">
               {t("footer.description")}
@@ -81,15 +84,16 @@ export function Footer() {
           <div>
             <h4 className="mb-4 font-semibold text-white">{t("footer.contactInfo")}</h4>
             <ul className="space-y-2 text-sm text-white/60">
-              <li>+995 568 705 713</li>
+              <li>+995 595 727 017</li>
               <li>+995 555 54 16 44</li>
+              <li>{t("contact.address")}</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-8 text-center">
           <p className="text-sm text-white/40">
-            &copy; {new Date().getFullYear()} AutoPro. {t("footer.rights")}
+            &copy; {new Date().getFullYear()} Top Car. {t("footer.rights")}
           </p>
         </div>
       </div>

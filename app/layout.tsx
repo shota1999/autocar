@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'AutoPro - Premium Auto Detailing & Protection Services',
+  title: 'Top Car - Premium Auto Detailing & Protection Services',
   description: 'Expert automotive care including paint protection, ceramic coating, collision repair, and full detailing services. Your trusted partner in automotive excellence.',
   generator: 'v0.app',
   icons: {
