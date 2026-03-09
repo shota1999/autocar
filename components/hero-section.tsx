@@ -41,33 +41,70 @@ export function HeroSection() {
     },
   ]
 
+  const mobileCollageCards = [
+    {
+      ...collageImages.before,
+      className: "col-span-2 aspect-[16/11]",
+      sizes: "(max-width: 1024px) 100vw, 50vw",
+      priority: true,
+    },
+    {
+      ...collageImages.after,
+      className: "aspect-[5/6]",
+      sizes: "(max-width: 640px) 50vw, 33vw",
+    },
+    {
+      ...collageImages.damage,
+      className: "aspect-[5/6]",
+      sizes: "(max-width: 640px) 50vw, 33vw",
+    },
+    {
+      ...collageImages.side,
+      className: "aspect-[5/6]",
+      sizes: "(max-width: 640px) 50vw, 33vw",
+    },
+  ]
+
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center px-4 pt-24 pb-12 md:px-8"
+      className="relative flex px-4 pt-28 pb-14 sm:px-6 md:px-8 md:pt-32 lg:min-h-screen lg:items-center lg:pb-12"
     >
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto grid max-w-7xl items-start gap-10 lg:grid-cols-2 lg:gap-16">
         {/* Image Collage */}
-        <div className="relative">
-          <div className="space-y-4 lg:hidden">
-            {[collageImages.before, collageImages.after, collageImages.side, collageImages.damage].map((image) => (
+        <div className="order-2 relative lg:order-1">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:hidden">
+            {mobileCollageCards.map((image) => (
               <div
                 key={image.src}
-                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-[0_24px_70px_rgba(0,0,0,0.35)]"
+                className={`relative overflow-hidden rounded-[24px] border border-white/10 bg-white/5 shadow-[0_24px_70px_rgba(0,0,0,0.35)] ${image.className}`}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
+                  sizes={image.sizes}
+                  priority={image.priority}
                   className="object-cover"
                 />
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/45 to-transparent" />
               </div>
             ))}
 
-            <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-white/10 bg-zinc-900/70 p-4 text-center shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
-              <div>
-                <p className="text-4xl font-bold text-red-500">15+</p>
-                <p className="text-sm text-white/70">Years Experience</p>
+            <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-zinc-900/85 p-4 shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.22),transparent_58%)]" />
+              <div className="relative flex h-full min-h-[9.5rem] flex-col justify-between">
+                <span className="text-[0.65rem] font-medium uppercase tracking-[0.35em] text-white/45">
+                  TopCar
+                </span>
+                <div>
+                  <p className="text-4xl font-black text-red-500 sm:text-5xl">
+                    15+
+                  </p>
+                  <p className="mt-2 max-w-[10ch] text-sm font-medium leading-snug text-white/70">
+                    Years Experience
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -79,6 +116,8 @@ export function HeroSection() {
                   src={collageImages.before.src}
                   alt={collageImages.before.alt}
                   fill
+                  sizes="(max-width: 1280px) 26vw, 24vw"
+                  priority
                   className="object-cover"
                 />
               </div>
@@ -90,6 +129,7 @@ export function HeroSection() {
                   src={collageImages.after.src}
                   alt={collageImages.after.alt}
                   fill
+                  sizes="(max-width: 1280px) 25vw, 23vw"
                   className="object-cover"
                 />
               </div>
@@ -101,6 +141,7 @@ export function HeroSection() {
                   src={collageImages.side.src}
                   alt={collageImages.side.alt}
                   fill
+                  sizes="(max-width: 1280px) 22vw, 20vw"
                   className="object-cover"
                 />
               </div>
@@ -112,6 +153,7 @@ export function HeroSection() {
                   src={collageImages.damage.src}
                   alt={collageImages.damage.alt}
                   fill
+                  sizes="(max-width: 1280px) 24vw, 22vw"
                   className="object-cover"
                 />
               </div>
@@ -129,26 +171,26 @@ export function HeroSection() {
         </div>
 
         {/* Content */}
-        <div className="flex flex-col justify-center">
-          <p className="mb-4 text-sm uppercase tracking-wider text-white/60">
+        <div className="order-1 flex max-w-2xl flex-col justify-center lg:order-2 lg:pt-8">
+          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-white/60 sm:text-sm">
             {t("hero.subtitle")}
           </p>
-          <h1 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl text-balance">
+          <h1 className="mb-6 text-4xl font-bold leading-none text-white text-balance sm:text-5xl lg:text-6xl">
             {t("hero.title")}
           </h1>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {accordionItems.map((item) => (
               <div key={item.id} className="border-b border-white/10">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between py-4 text-left"
+                  className="flex w-full items-center justify-between gap-4 py-4 text-left"
                   onClick={() =>
                     setOpenItem(openItem === item.id ? null : item.id)
                   }
                 >
                   <span
-                    className={`font-medium transition-colors ${openItem === item.id ? "text-red-500" : "text-white"}`}
+                    className={`text-sm font-medium transition-colors sm:text-base ${openItem === item.id ? "text-red-500" : "text-white"}`}
                   >
                     {item.title}
                   </span>
@@ -157,7 +199,9 @@ export function HeroSection() {
                   />
                 </button>
                 {openItem === item.id && (
-                  <div className="pb-4 text-white/70">{item.content}</div>
+                  <div className="max-w-xl pb-4 text-sm leading-7 text-white/70 sm:text-base">
+                    {item.content}
+                  </div>
                 )}
               </div>
             ))}
